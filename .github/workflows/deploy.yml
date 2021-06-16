@@ -28,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
-        run: npm install -g cdk-assets
+        run: npm install --no-save cdk-assets
       - run: mkdir -p ~/.aws
       - run: echo "[default]" > ~/.aws/config
       - run: echo "region=eu-west-1" >> ~/.aws/config
@@ -39,7 +39,7 @@ jobs:
           ~/.aws/credentials
       - name: Publish ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c
           (template)
-        run: cdk-assets --path
+        run: npx cdk-assets --path
           "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
           --verbose publish
           "ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c:585695036304-us-east-1"
@@ -54,7 +54,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
-        run: npm install -g cdk-assets
+        run: npm install --no-save cdk-assets
       - run: mkdir -p ~/.aws
       - run: echo "[default]" > ~/.aws/config
       - run: echo "region=eu-west-1" >> ~/.aws/config
@@ -65,13 +65,13 @@ jobs:
           ~/.aws/credentials
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
-        run: cdk-assets --path
+        run: npx cdk-assets --path
           "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-us-east-1"
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
-        run: cdk-assets --path
+        run: npx cdk-assets --path
           "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
@@ -86,7 +86,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
-        run: npm install -g cdk-assets
+        run: npm install --no-save cdk-assets
       - run: mkdir -p ~/.aws
       - run: echo "[default]" > ~/.aws/config
       - run: echo "region=eu-west-1" >> ~/.aws/config
@@ -97,7 +97,7 @@ jobs:
           ~/.aws/credentials
       - name: Publish 952f7f7a372df87fbd0be87963f1e753fc18a5fb8378b4bc117f5906d3bf3089
           (template)
-        run: cdk-assets --path
+        run: npx cdk-assets --path
           "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
           --verbose publish
           "952f7f7a372df87fbd0be87963f1e753fc18a5fb8378b4bc117f5906d3bf3089:585695036304-eu-west-2"
@@ -112,7 +112,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install
-        run: npm install -g cdk-assets
+        run: npm install --no-save cdk-assets
       - run: mkdir -p ~/.aws
       - run: echo "[default]" > ~/.aws/config
       - run: echo "region=eu-west-1" >> ~/.aws/config
@@ -123,7 +123,7 @@ jobs:
           ~/.aws/credentials
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
-        run: cdk-assets --path
+        run: npx cdk-assets --path
           "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
