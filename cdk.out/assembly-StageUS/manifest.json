@@ -1,0 +1,60 @@
+{
+  "version": "12.0.0",
+  "artifacts": {
+    "StageUSMyStackACE73A8B.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "StageUSMyStackACE73A8B.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "StageUSMyStackACE73A8B": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://585695036304/us-east-1",
+      "properties": {
+        "templateFile": "StageUSMyStackACE73A8B.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "StageUSMyStackACE73A8B.assets"
+        ],
+        "stackName": "StageUS-MyStack"
+      },
+      "dependencies": [
+        "StageUSMyStackACE73A8B.assets"
+      ],
+      "metadata": {
+        "/StageUS/MyStack/Function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionServiceRole675BB04A"
+          }
+        ],
+        "/StageUS/MyStack/Function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Function76856677"
+          }
+        ],
+        "/StageUS/MyStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/StageUS/MyStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "StageUS/MyStack"
+    }
+  }
+}

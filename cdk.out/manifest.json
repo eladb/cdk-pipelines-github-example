@@ -1,11 +1,18 @@
 {
   "version": "12.0.0",
   "artifacts": {
-    "assembly-MyStack": {
+    "assembly-StageUS": {
       "type": "cdk:cloud-assembly",
       "properties": {
-        "directoryName": "assembly-MyStack",
-        "displayName": "MyStack"
+        "directoryName": "assembly-StageUS",
+        "displayName": "StageUS"
+      }
+    },
+    "assembly-StageEU": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-StageEU",
+        "displayName": "StageEU"
       }
     }
   }
