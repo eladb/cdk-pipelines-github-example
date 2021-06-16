@@ -1,0 +1,12 @@
+{
+  "version": "12.0.0",
+  "artifacts": {
+    "assembly-MyStack": {
+      "type": "cdk:cloud-assembly",
+      "properties": {
+        "directoryName": "assembly-MyStack",
+        "displayName": "MyStack"
+      }
+    }
+  }
+}

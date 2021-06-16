@@ -1,0 +1,60 @@
+{
+  "version": "12.0.0",
+  "artifacts": {
+    "MyStack098574E7.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "MyStack098574E7.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "MyStack098574E7": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://585695036304/us-east-1",
+      "properties": {
+        "templateFile": "MyStack098574E7.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "MyStack098574E7.assets"
+        ],
+        "stackName": "MyStack-MyStack"
+      },
+      "dependencies": [
+        "MyStack098574E7.assets"
+      ],
+      "metadata": {
+        "/MyStack/MyStack/Function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionServiceRole675BB04A"
+          }
+        ],
+        "/MyStack/MyStack/Function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Function76856677"
+          }
+        ],
+        "/MyStack/MyStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/MyStack/MyStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "MyStack/MyStack"
+    }
+  }
+}

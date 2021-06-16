@@ -1,0 +1,95 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+jobs:
+  Build:
+    name: Synthesize
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    needs: []
+    env: {}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: echo "nothing to do"
+      - name: Upload cdk.out
+        uses: actions/upload-artifact@v2.1.1
+        with:
+          name: cdk.out
+          path: cdk.out
+  FileAsset1:
+    name: Publish Assets FileAsset1
+    needs:
+      - Build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download cdk.out
+        uses: actions/download-artifact@v2
+        with:
+          name: cdk.out
+          path: cdk.out
+      - name: Install
+        run: npm install -g cdk-assets
+      - name: Publish ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c
+          (template)
+        run: cdk-assets --path "cdk.out/assembly-MyStack/MyStack098574E7.assets.json"
+          --verbose publish
+          "ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c:585695036304-us-east-1"
+  FileAsset2:
+    name: Publish Assets FileAsset2
+    needs:
+      - Build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download cdk.out
+        uses: actions/download-artifact@v2
+        with:
+          name: cdk.out
+          path: cdk.out
+      - name: Install
+        run: npm install -g cdk-assets
+      - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
+          "
+        run: cdk-assets --path "cdk.out/assembly-MyStack/MyStack098574E7.assets.json"
+          --verbose publish
+          "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-us-east-1"
+  Prepare:
+    name: Create ChangeSet for MyStack098574E7
+    permissions:
+      contents: none
+    needs:
+      - Build
+      - FileAsset1
+      - FileAsset2
+    runs-on: ubuntu-latest
+    container:
+      image: amazon/aws-cli
+    steps:
+      - run: aws cloudformation create-change-set --stack-name MyStack-MyStack
+          --change-set-name MyStack098574E7 --template-url
+          s3://cdk-hnb659fds-assets-585695036304-us-east-1/ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c.json
+          --capabilities
+          CAPABILITY_IAM,CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND --role-arn
+          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
+          --region us-east-1
+  Deploy:
+    name: Execute ChangeSet for MyStack098574E7
+    permissions:
+      contents: none
+    needs:
+      - Prepare
+    runs-on: ubuntu-latest
+    container:
+      image: amazon/aws-cli
+    steps:
+      - run: aws cloudformation execute-change-set --change-set-name MyStack098574E7
+          --region us-east-1
