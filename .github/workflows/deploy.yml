@@ -37,12 +37,12 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - name: Publish ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c
+      - name: Publish ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a
           (template)
         run: npx cdk-assets --path
           "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
           --verbose publish
-          "ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c:585695036304-us-east-1"
+          "ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a:585695036304-us-east-1"
   assets-fileasset2:
     name: Publish Assets assets-fileasset2
     needs:
@@ -95,14 +95,46 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - name: Publish 952f7f7a372df87fbd0be87963f1e753fc18a5fb8378b4bc117f5906d3bf3089
+      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
+          "
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
+          --verbose publish
+          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-us-east-1"
+      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
+          "
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
+          --verbose publish
+          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
+  assets-fileasset4:
+    name: Publish Assets assets-fileasset4
+    needs:
+      - build-build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm install --no-save cdk-assets
+      - run: mkdir -p ~/.aws
+      - run: echo "[default]" > ~/.aws/config
+      - run: echo "region=eu-west-1" >> ~/.aws/config
+      - run: echo "[default]" > ~/.aws/credentials
+      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
+          ~/.aws/credentials
+      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
+          ~/.aws/credentials
+      - name: Publish b32f47044db59ad278659873c1c59072d8766e603fbfed1188727d2b52e7d274
           (template)
         run: npx cdk-assets --path
           "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
           --verbose publish
-          "952f7f7a372df87fbd0be87963f1e753fc18a5fb8378b4bc117f5906d3bf3089:585695036304-eu-west-2"
-  assets-fileasset4:
-    name: Publish Assets assets-fileasset4
+          "b32f47044db59ad278659873c1c59072d8766e603fbfed1188727d2b52e7d274:585695036304-eu-west-2"
+  assets-fileasset5:
+    name: Publish Assets assets-fileasset5
     needs:
       - build-build
     permissions:
@@ -127,6 +159,32 @@ jobs:
           "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
+  assets-fileasset6:
+    name: Publish Assets assets-fileasset6
+    needs:
+      - build-build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm install --no-save cdk-assets
+      - run: mkdir -p ~/.aws
+      - run: echo "[default]" > ~/.aws/config
+      - run: echo "region=eu-west-1" >> ~/.aws/config
+      - run: echo "[default]" > ~/.aws/credentials
+      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
+          ~/.aws/credentials
+      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
+          ~/.aws/credentials
+      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
+          "
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
+          --verbose publish
+          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
   stageus-mystack-prepare:
     name: Create ChangeSet for StageUSMyStackACE73A8B
     permissions:
@@ -135,6 +193,7 @@ jobs:
       - build-build
       - assets-fileasset1
       - assets-fileasset2
+      - assets-fileasset3
     runs-on: ubuntu-latest
     container:
       image: amazon/aws-cli
@@ -158,7 +217,7 @@ jobs:
       - run: aws cloudformation create-change-set --stack-name StageUS-MyStack
           --change-set-name StageUSMyStackACE73A8B --change-set-type ${{
           steps.stack_exists.outputs.CHANGE_TYPE }} --template-url
-          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/ac9bbf27734a6f15159fc47fec5e7523fd74183c1d92b837b925c49d5647390c.json
+          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a.json
           --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
           CAPABILITY_AUTO_EXPAND --role-arn
           arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
@@ -194,8 +253,9 @@ jobs:
       contents: none
     needs:
       - build-build
-      - assets-fileasset3
       - assets-fileasset4
+      - assets-fileasset5
+      - assets-fileasset6
     runs-on: ubuntu-latest
     container:
       image: amazon/aws-cli
@@ -219,7 +279,7 @@ jobs:
       - run: aws cloudformation create-change-set --stack-name StageEU-MyStack
           --change-set-name StageEUMyStack26C0BAB8 --change-set-type ${{
           steps.stack_exists.outputs.CHANGE_TYPE }} --template-url
-          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/952f7f7a372df87fbd0be87963f1e753fc18a5fb8378b4bc117f5906d3bf3089.json
+          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/b32f47044db59ad278659873c1c59072d8766e603fbfed1188727d2b52e7d274.json
           --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
           CAPABILITY_AUTO_EXPAND --role-arn
           arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
