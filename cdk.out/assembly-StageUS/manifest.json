@@ -1,90 +1,152 @@
 {
   "version": "12.0.0",
   "artifacts": {
-    "StageUSMyStackACE73A8B.assets": {
+    "StageUSFunctionStackFD0586E0.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "StageUSMyStackACE73A8B.assets.json",
+        "file": "StageUSFunctionStackFD0586E0.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "StageUSMyStackACE73A8B": {
+    "StageUSFunctionStackFD0586E0": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://585695036304/us-east-1",
       "properties": {
-        "templateFile": "StageUSMyStackACE73A8B.template.json",
+        "templateFile": "StageUSFunctionStackFD0586E0.template.json",
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "StageUSMyStackACE73A8B.assets"
+          "StageUSFunctionStackFD0586E0.assets"
         ],
-        "stackName": "StageUS-MyStack"
+        "stackName": "StageUS-FunctionStack"
       },
       "dependencies": [
-        "StageUSMyStackACE73A8B.assets"
+        "StageUSBucketStack55155FD2",
+        "StageUSFunctionStackFD0586E0.assets"
       ],
       "metadata": {
-        "/StageUS/MyStack/Function/ServiceRole/Resource": [
+        "/StageUS/FunctionStack/Function/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FunctionServiceRole675BB04A"
           }
         ],
-        "/StageUS/MyStack/Function/Resource": [
+        "/StageUS/FunctionStack/Function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionServiceRoleDefaultPolicy2F49994A"
+          }
+        ],
+        "/StageUS/FunctionStack/Function/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Function76856677"
           }
         ],
-        "/StageUS/MyStack/Bucket/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "Bucket83908E77"
-          }
-        ],
-        "/StageUS/MyStack/Bucket/Policy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "BucketPolicyE9A3008A"
-          }
-        ],
-        "/StageUS/MyStack/Bucket/AutoDeleteObjectsCustomResource/Default": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "BucketAutoDeleteObjectsCustomResourceBAFD23C2"
-          }
-        ],
-        "/StageUS/MyStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
-          }
-        ],
-        "/StageUS/MyStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
-          }
-        ],
-        "/StageUS/MyStack/BootstrapVersion": [
+        "/StageUS/FunctionStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/StageUS/MyStack/CheckBootstrapVersion": [
+        "/StageUS/FunctionStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "StageUS/MyStack"
+      "displayName": "StageUS/FunctionStack"
+    },
+    "StageUSBucketStack55155FD2.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "StageUSBucketStack55155FD2.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "StageUSBucketStack55155FD2": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://585695036304/us-east-1",
+      "properties": {
+        "templateFile": "StageUSBucketStack55155FD2.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "StageUSBucketStack55155FD2.assets"
+        ],
+        "stackName": "StageUS-BucketStack"
+      },
+      "dependencies": [
+        "StageUSBucketStack55155FD2.assets"
+      ],
+      "metadata": {
+        "/StageUS/BucketStack/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket83908E77"
+          }
+        ],
+        "/StageUS/BucketStack/Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketPolicyE9A3008A"
+          }
+        ],
+        "/StageUS/BucketStack/Bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketAutoDeleteObjectsCustomResourceBAFD23C2"
+          }
+        ],
+        "/StageUS/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/StageUS/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/StageUS/BucketStack/Exports/Output{\"Fn::GetAtt\":[\"Bucket83908E77\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttBucket83908E77Arn063C8555"
+          }
+        ],
+        "/StageUS/BucketStack/Exports/Output{\"Ref\":\"Bucket83908E77\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefBucket83908E7781C90AC0"
+          }
+        ],
+        "/StageUS/BucketStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/StageUS/BucketStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "StageUS/BucketStack"
     }
   }
 }

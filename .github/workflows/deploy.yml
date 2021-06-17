@@ -37,12 +37,12 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - name: Publish ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a
+      - name: Publish 1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92
           (template)
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
+          "cdk.out/assembly-StageUS/StageUSBucketStack55155FD2.assets.json"
           --verbose publish
-          "ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a:585695036304-us-east-1"
+          "1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92:585695036304-us-east-1"
   assets-fileasset2:
     name: Publish Assets assets-fileasset2
     needs:
@@ -63,18 +63,18 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
+      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
+          "cdk.out/assembly-StageUS/StageUSBucketStack55155FD2.assets.json"
           --verbose publish
-          "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-us-east-1"
-      - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
+          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-us-east-1"
+      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
+          "cdk.out/assembly-StageEU/StageEUBucketStack1CE2F45A.assets.json"
           --verbose publish
-          "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
+          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
   assets-fileasset3:
     name: Publish Assets assets-fileasset3
     needs:
@@ -95,46 +95,14 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
-          "
-        run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSMyStackACE73A8B.assets.json"
-          --verbose publish
-          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-us-east-1"
-      - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
-          "
-        run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
-          --verbose publish
-          "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
-  assets-fileasset4:
-    name: Publish Assets assets-fileasset4
-    needs:
-      - build-build
-    permissions:
-      contents: read
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install
-        run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
-      - name: Publish b32f47044db59ad278659873c1c59072d8766e603fbfed1188727d2b52e7d274
+      - name: Publish fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a
           (template)
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
+          "cdk.out/assembly-StageUS/StageUSFunctionStackFD0586E0.assets.json"
           --verbose publish
-          "b32f47044db59ad278659873c1c59072d8766e603fbfed1188727d2b52e7d274:585695036304-eu-west-2"
-  assets-fileasset5:
-    name: Publish Assets assets-fileasset5
+          "fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a:585695036304-us-east-1"
+  assets-fileasset4:
+    name: Publish Assets assets-fileasset4
     needs:
       - build-build
     permissions:
@@ -156,9 +124,41 @@ jobs:
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
+          "cdk.out/assembly-StageUS/StageUSFunctionStackFD0586E0.assets.json"
+          --verbose publish
+          "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-us-east-1"
+      - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
+          "
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageEU/StageEUFunctionStack5AFECDE6.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
+  assets-fileasset5:
+    name: Publish Assets assets-fileasset5
+    needs:
+      - build-build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm install --no-save cdk-assets
+      - run: mkdir -p ~/.aws
+      - run: echo "[default]" > ~/.aws/config
+      - run: echo "region=eu-west-1" >> ~/.aws/config
+      - run: echo "[default]" > ~/.aws/credentials
+      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
+          ~/.aws/credentials
+      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
+          ~/.aws/credentials
+      - name: Publish 2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49
+          (template)
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageEU/StageEUBucketStack1CE2F45A.assets.json"
+          --verbose publish
+          "2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49:585695036304-eu-west-2"
   assets-fileasset6:
     name: Publish Assets assets-fileasset6
     needs:
@@ -182,18 +182,69 @@ jobs:
       - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUMyStack26C0BAB8.assets.json"
+          "cdk.out/assembly-StageEU/StageEUBucketStack1CE2F45A.assets.json"
           --verbose publish
           "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
-  stageus-mystack-prepare:
-    name: Create ChangeSet for StageUSMyStackACE73A8B
+  assets-fileasset7:
+    name: Publish Assets assets-fileasset7
+    needs:
+      - build-build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm install --no-save cdk-assets
+      - run: mkdir -p ~/.aws
+      - run: echo "[default]" > ~/.aws/config
+      - run: echo "region=eu-west-1" >> ~/.aws/config
+      - run: echo "[default]" > ~/.aws/credentials
+      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
+          ~/.aws/credentials
+      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
+          ~/.aws/credentials
+      - name: Publish 052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df
+          (template)
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageEU/StageEUFunctionStack5AFECDE6.assets.json"
+          --verbose publish
+          "052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df:585695036304-eu-west-2"
+  assets-fileasset8:
+    name: Publish Assets assets-fileasset8
+    needs:
+      - build-build
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: npm install --no-save cdk-assets
+      - run: mkdir -p ~/.aws
+      - run: echo "[default]" > ~/.aws/config
+      - run: echo "region=eu-west-1" >> ~/.aws/config
+      - run: echo "[default]" > ~/.aws/credentials
+      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
+          ~/.aws/credentials
+      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
+          ~/.aws/credentials
+      - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
+          "
+        run: npx cdk-assets --path
+          "cdk.out/assembly-StageEU/StageEUFunctionStack5AFECDE6.assets.json"
+          --verbose publish
+          "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
+  stageus-bucketstack-deploy:
+    name: Deploy StageUSBucketStack55155FD2
     permissions:
       contents: none
     needs:
       - build-build
       - assets-fileasset1
       - assets-fileasset2
-      - assets-fileasset3
     runs-on: ubuntu-latest
     container:
       image: amazon/aws-cli
@@ -209,28 +260,34 @@ jobs:
       - id: stack_exists
         run: >-
           if aws cloudformation describe-stacks --no-cli-pager --output json
-          --region us-east-1 --stack-name "StageUS-MyStack"; then
+          --region us-east-1 --stack-name "StageUS-BucketStack"; then
               echo "::set-output name=CHANGE_TYPE::UPDATE"
           else
               echo "::set-output name=CHANGE_TYPE::CREATE"
           fi
-      - run: aws cloudformation create-change-set --stack-name StageUS-MyStack
-          --change-set-name StageUSMyStackACE73A8B --change-set-type ${{
-          steps.stack_exists.outputs.CHANGE_TYPE }} --template-url
-          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/ae572ee0d6f6eb785b3748f2232e132d06096102700562d31e7d8512164a552a.json
+      - run: aws cloudformation create-change-set --region us-east-1 --stack-name
+          StageUS-BucketStack --change-set-name StageUSBucketStack55155FD2
+          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
+          --template-url
+          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92.json
           --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
           CAPABILITY_AUTO_EXPAND --role-arn
           arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
-          --region us-east-1
       - run: aws cloudformation wait change-set-create-complete --region us-east-1
-          --change-set-name "StageUSMyStackACE73A8B" --stack-name
-          "StageUS-MyStack"
-  stageus-mystack-deploy:
-    name: Execute ChangeSet for StageUSMyStackACE73A8B
+          --change-set-name "StageUSBucketStack55155FD2" --stack-name
+          "StageUS-BucketStack"
+      - run: aws cloudformation execute-change-set --region us-east-1 --stack-name
+          StageUS-BucketStack --change-set-name StageUSBucketStack55155FD2
+      - run: aws cloudformation wait stack-update-complete --region us-east-1
+          --stack-name "StageUS-BucketStack"
+  stageus-functionstack-deploy:
+    name: Deploy StageUSFunctionStackFD0586E0
     permissions:
       contents: none
     needs:
-      - stageus-mystack-prepare
+      - build-build
+      - assets-fileasset3
+      - assets-fileasset4
     runs-on: ubuntu-latest
     container:
       image: amazon/aws-cli
@@ -243,17 +300,35 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - run: aws cloudformation execute-change-set --stack-name StageUS-MyStack
-          --change-set-name StageUSMyStackACE73A8B --region us-east-1
+      - id: stack_exists
+        run: >-
+          if aws cloudformation describe-stacks --no-cli-pager --output json
+          --region us-east-1 --stack-name "StageUS-FunctionStack"; then
+              echo "::set-output name=CHANGE_TYPE::UPDATE"
+          else
+              echo "::set-output name=CHANGE_TYPE::CREATE"
+          fi
+      - run: aws cloudformation create-change-set --region us-east-1 --stack-name
+          StageUS-FunctionStack --change-set-name StageUSFunctionStackFD0586E0
+          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
+          --template-url
+          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a.json
+          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
+          CAPABILITY_AUTO_EXPAND --role-arn
+          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
+      - run: aws cloudformation wait change-set-create-complete --region us-east-1
+          --change-set-name "StageUSFunctionStackFD0586E0" --stack-name
+          "StageUS-FunctionStack"
+      - run: aws cloudformation execute-change-set --region us-east-1 --stack-name
+          StageUS-FunctionStack --change-set-name StageUSFunctionStackFD0586E0
       - run: aws cloudformation wait stack-update-complete --region us-east-1
-          --stack-name "StageUS-MyStack"
-  stageeu-mystack-prepare:
-    name: Create ChangeSet for StageEUMyStack26C0BAB8
+          --stack-name "StageUS-FunctionStack"
+  stageeu-bucketstack-deploy:
+    name: Deploy StageEUBucketStack1CE2F45A
     permissions:
       contents: none
     needs:
       - build-build
-      - assets-fileasset4
       - assets-fileasset5
       - assets-fileasset6
     runs-on: ubuntu-latest
@@ -271,28 +346,34 @@ jobs:
       - id: stack_exists
         run: >-
           if aws cloudformation describe-stacks --no-cli-pager --output json
-          --region eu-west-2 --stack-name "StageEU-MyStack"; then
+          --region eu-west-2 --stack-name "StageEU-BucketStack"; then
               echo "::set-output name=CHANGE_TYPE::UPDATE"
           else
               echo "::set-output name=CHANGE_TYPE::CREATE"
           fi
-      - run: aws cloudformation create-change-set --stack-name StageEU-MyStack
-          --change-set-name StageEUMyStack26C0BAB8 --change-set-type ${{
-          steps.stack_exists.outputs.CHANGE_TYPE }} --template-url
-          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/b32f47044db59ad278659873c1c59072d8766e603fbfed1188727d2b52e7d274.json
+      - run: aws cloudformation create-change-set --region eu-west-2 --stack-name
+          StageEU-BucketStack --change-set-name StageEUBucketStack1CE2F45A
+          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
+          --template-url
+          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49.json
           --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
           CAPABILITY_AUTO_EXPAND --role-arn
           arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
-          --region eu-west-2
       - run: aws cloudformation wait change-set-create-complete --region eu-west-2
-          --change-set-name "StageEUMyStack26C0BAB8" --stack-name
-          "StageEU-MyStack"
-  stageeu-mystack-deploy:
-    name: Execute ChangeSet for StageEUMyStack26C0BAB8
+          --change-set-name "StageEUBucketStack1CE2F45A" --stack-name
+          "StageEU-BucketStack"
+      - run: aws cloudformation execute-change-set --region eu-west-2 --stack-name
+          StageEU-BucketStack --change-set-name StageEUBucketStack1CE2F45A
+      - run: aws cloudformation wait stack-update-complete --region eu-west-2
+          --stack-name "StageEU-BucketStack"
+  stageeu-functionstack-deploy:
+    name: Deploy StageEUFunctionStack5AFECDE6
     permissions:
       contents: none
     needs:
-      - stageeu-mystack-prepare
+      - build-build
+      - assets-fileasset7
+      - assets-fileasset8
     runs-on: ubuntu-latest
     container:
       image: amazon/aws-cli
@@ -305,7 +386,26 @@ jobs:
           ~/.aws/credentials
       - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
           ~/.aws/credentials
-      - run: aws cloudformation execute-change-set --stack-name StageEU-MyStack
-          --change-set-name StageEUMyStack26C0BAB8 --region eu-west-2
+      - id: stack_exists
+        run: >-
+          if aws cloudformation describe-stacks --no-cli-pager --output json
+          --region eu-west-2 --stack-name "StageEU-FunctionStack"; then
+              echo "::set-output name=CHANGE_TYPE::UPDATE"
+          else
+              echo "::set-output name=CHANGE_TYPE::CREATE"
+          fi
+      - run: aws cloudformation create-change-set --region eu-west-2 --stack-name
+          StageEU-FunctionStack --change-set-name StageEUFunctionStack5AFECDE6
+          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
+          --template-url
+          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df.json
+          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
+          CAPABILITY_AUTO_EXPAND --role-arn
+          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
+      - run: aws cloudformation wait change-set-create-complete --region eu-west-2
+          --change-set-name "StageEUFunctionStack5AFECDE6" --stack-name
+          "StageEU-FunctionStack"
+      - run: aws cloudformation execute-change-set --region eu-west-2 --stack-name
+          StageEU-FunctionStack --change-set-name StageEUFunctionStack5AFECDE6
       - run: aws cloudformation wait stack-update-complete --region eu-west-2
-          --stack-name "StageEU-MyStack"
+          --stack-name "StageEU-FunctionStack"
