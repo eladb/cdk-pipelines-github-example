@@ -29,14 +29,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: Publish 1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92
           (template)
         run: npx cdk-assets --path
@@ -55,14 +54,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
@@ -87,14 +85,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: Publish fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a
           (template)
         run: npx cdk-assets --path
@@ -113,14 +110,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
         run: npx cdk-assets --path
@@ -145,14 +141,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: Publish 2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49
           (template)
         run: npx cdk-assets --path
@@ -171,14 +166,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
@@ -197,14 +191,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: Publish 052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df
           (template)
         run: npx cdk-assets --path
@@ -223,14 +216,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install
         run: npm install --no-save cdk-assets
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
         run: npx cdk-assets --path
@@ -245,41 +237,24 @@ jobs:
       - build-build
       - assets-fileasset1
       - assets-fileasset2
+      - build-build
     runs-on: ubuntu-latest
-    container:
-      image: amazon/aws-cli
     steps:
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
-      - id: stack_exists
-        run: >-
-          if aws cloudformation describe-stacks --no-cli-pager --output json
-          --region us-east-1 --stack-name "StageUS-BucketStack"; then
-              echo "::set-output name=CHANGE_TYPE::UPDATE"
-          else
-              echo "::set-output name=CHANGE_TYPE::CREATE"
-          fi
-      - run: aws cloudformation create-change-set --region us-east-1 --stack-name
-          StageUS-BucketStack --change-set-name StageUSBucketStack55155FD2
-          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
-          --template-url
-          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92.json
-          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
-          CAPABILITY_AUTO_EXPAND --role-arn
-          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
-      - run: aws cloudformation wait change-set-create-complete --region us-east-1
-          --change-set-name "StageUSBucketStack55155FD2" --stack-name
-          "StageUS-BucketStack"
-      - run: aws cloudformation execute-change-set --region us-east-1 --stack-name
-          StageUS-BucketStack --change-set-name StageUSBucketStack55155FD2
-      - run: aws cloudformation wait stack-update-complete --region us-east-1
-          --stack-name "StageUS-BucketStack"
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
+          role-to-assume: arn:aws:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1
+          role-external-id: Pipeline
+      - uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: StageUS-BucketStack
+          template: https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92.json
+          no-fail-on-empty-changeset: "1"
+          role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
   stageus-functionstack-deploy:
     name: Deploy StageUSFunctionStackFD0586E0
     permissions:
@@ -288,41 +263,25 @@ jobs:
       - build-build
       - assets-fileasset3
       - assets-fileasset4
+      - stageus-bucketstack-deploy
+      - build-build
     runs-on: ubuntu-latest
-    container:
-      image: amazon/aws-cli
     steps:
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
-      - id: stack_exists
-        run: >-
-          if aws cloudformation describe-stacks --no-cli-pager --output json
-          --region us-east-1 --stack-name "StageUS-FunctionStack"; then
-              echo "::set-output name=CHANGE_TYPE::UPDATE"
-          else
-              echo "::set-output name=CHANGE_TYPE::CREATE"
-          fi
-      - run: aws cloudformation create-change-set --region us-east-1 --stack-name
-          StageUS-FunctionStack --change-set-name StageUSFunctionStackFD0586E0
-          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
-          --template-url
-          https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a.json
-          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
-          CAPABILITY_AUTO_EXPAND --role-arn
-          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
-      - run: aws cloudformation wait change-set-create-complete --region us-east-1
-          --change-set-name "StageUSFunctionStackFD0586E0" --stack-name
-          "StageUS-FunctionStack"
-      - run: aws cloudformation execute-change-set --region us-east-1 --stack-name
-          StageUS-FunctionStack --change-set-name StageUSFunctionStackFD0586E0
-      - run: aws cloudformation wait stack-update-complete --region us-east-1
-          --stack-name "StageUS-FunctionStack"
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
+          role-to-assume: arn:aws:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1
+          role-external-id: Pipeline
+      - uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: StageUS-FunctionStack
+          template: https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a.json
+          no-fail-on-empty-changeset: "1"
+          role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
   stageeu-bucketstack-deploy:
     name: Deploy StageEUBucketStack1CE2F45A
     permissions:
@@ -331,41 +290,26 @@ jobs:
       - build-build
       - assets-fileasset5
       - assets-fileasset6
+      - build-build
+      - stageus-bucketstack-deploy
+      - stageus-functionstack-deploy
     runs-on: ubuntu-latest
-    container:
-      image: amazon/aws-cli
     steps:
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
-      - id: stack_exists
-        run: >-
-          if aws cloudformation describe-stacks --no-cli-pager --output json
-          --region eu-west-2 --stack-name "StageEU-BucketStack"; then
-              echo "::set-output name=CHANGE_TYPE::UPDATE"
-          else
-              echo "::set-output name=CHANGE_TYPE::CREATE"
-          fi
-      - run: aws cloudformation create-change-set --region eu-west-2 --stack-name
-          StageEU-BucketStack --change-set-name StageEUBucketStack1CE2F45A
-          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
-          --template-url
-          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49.json
-          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
-          CAPABILITY_AUTO_EXPAND --role-arn
-          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
-      - run: aws cloudformation wait change-set-create-complete --region eu-west-2
-          --change-set-name "StageEUBucketStack1CE2F45A" --stack-name
-          "StageEU-BucketStack"
-      - run: aws cloudformation execute-change-set --region eu-west-2 --stack-name
-          StageEU-BucketStack --change-set-name StageEUBucketStack1CE2F45A
-      - run: aws cloudformation wait stack-update-complete --region eu-west-2
-          --stack-name "StageEU-BucketStack"
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
+          role-to-assume: arn:aws:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-eu-west-2
+          role-external-id: Pipeline
+      - uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: StageEU-BucketStack
+          template: https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49.json
+          no-fail-on-empty-changeset: "1"
+          role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
   stageeu-functionstack-deploy:
     name: Deploy StageEUFunctionStack5AFECDE6
     permissions:
@@ -374,38 +318,24 @@ jobs:
       - build-build
       - assets-fileasset7
       - assets-fileasset8
+      - stageeu-bucketstack-deploy
+      - build-build
+      - stageus-bucketstack-deploy
+      - stageus-functionstack-deploy
     runs-on: ubuntu-latest
-    container:
-      image: amazon/aws-cli
     steps:
-      - run: mkdir -p ~/.aws
-      - run: echo "[default]" > ~/.aws/config
-      - run: echo "region=eu-west-1" >> ~/.aws/config
-      - run: echo "[default]" > ~/.aws/credentials
-      - run: echo "aws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}" >>
-          ~/.aws/credentials
-      - run: echo "aws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >>
-          ~/.aws/credentials
-      - id: stack_exists
-        run: >-
-          if aws cloudformation describe-stacks --no-cli-pager --output json
-          --region eu-west-2 --stack-name "StageEU-FunctionStack"; then
-              echo "::set-output name=CHANGE_TYPE::UPDATE"
-          else
-              echo "::set-output name=CHANGE_TYPE::CREATE"
-          fi
-      - run: aws cloudformation create-change-set --region eu-west-2 --stack-name
-          StageEU-FunctionStack --change-set-name StageEUFunctionStack5AFECDE6
-          --change-set-type ${{ steps.stack_exists.outputs.CHANGE_TYPE }}
-          --template-url
-          https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df.json
-          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
-          CAPABILITY_AUTO_EXPAND --role-arn
-          arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
-      - run: aws cloudformation wait change-set-create-complete --region eu-west-2
-          --change-set-name "StageEUFunctionStack5AFECDE6" --stack-name
-          "StageEU-FunctionStack"
-      - run: aws cloudformation execute-change-set --region eu-west-2 --stack-name
-          StageEU-FunctionStack --change-set-name StageEUFunctionStack5AFECDE6
-      - run: aws cloudformation wait stack-update-complete --region eu-west-2
-          --stack-name "StageEU-FunctionStack"
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+          role-skip-session-tagging: true
+          role-duration-seconds: 1800
+          role-to-assume: arn:aws:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-eu-west-2
+          role-external-id: Pipeline
+      - uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: StageEU-FunctionStack
+          template: https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df.json
+          no-fail-on-empty-changeset: "1"
+          role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
