@@ -1,1 +1,4 @@
 .secrets
+node_modules
+!cdk.out
+!.github

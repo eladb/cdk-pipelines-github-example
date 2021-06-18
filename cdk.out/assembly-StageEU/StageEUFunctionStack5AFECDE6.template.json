@@ -29,6 +29,9 @@
             ]
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "StageEU/FunctionStack/Function/ServiceRole/Resource"
       }
     },
     "FunctionServiceRoleDefaultPolicy2F49994A": {
@@ -69,6 +72,9 @@
             "Ref": "FunctionServiceRole675BB04A"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "StageEU/FunctionStack/Function/ServiceRole/DefaultPolicy/Resource"
       }
     },
     "Function76856677": {
@@ -97,7 +103,21 @@
       "DependsOn": [
         "FunctionServiceRoleDefaultPolicy2F49994A",
         "FunctionServiceRole675BB04A"
-      ]
+      ],
+      "Metadata": {
+        "aws:cdk:path": "StageEU/FunctionStack/Function/Resource",
+        "aws:asset:path": "../asset.110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c",
+        "aws:asset:property": "Code"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAEzWO3QqDMAyFn2X3MSob7HZD2PXQJ+hqJ/EnhabdGKXvPqt4db6EnHNSYYXV6aa+Uuh+KqO2zmDsvNIT3EWMX3EgHqA1YoPTBhrL4l3QHpo3H9sEOSHOann1CuMjsPZkOZ8cnIDUgrG1s9mcWZ92Jv3L404J5FyoXCu4tacEbHuDo5Sf+oL1dX12FKLCBfa0GGx3/QORk/BExwAAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "StageEU/FunctionStack/CDKMetadata/Default"
+      }
     }
   },
   "Parameters": {

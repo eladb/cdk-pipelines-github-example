@@ -3,7 +3,10 @@
     "Bucket83908E77": {
       "Type": "AWS::S3::Bucket",
       "UpdateReplacePolicy": "Delete",
-      "DeletionPolicy": "Delete"
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "StageUS/BucketStack/Bucket/Resource"
+      }
     },
     "BucketPolicyE9A3008A": {
       "Type": "AWS::S3::BucketPolicy",
@@ -54,6 +57,9 @@
           ],
           "Version": "2012-10-17"
         }
+      },
+      "Metadata": {
+        "aws:cdk:path": "StageUS/BucketStack/Bucket/Policy/Resource"
       }
     },
     "BucketAutoDeleteObjectsCustomResourceBAFD23C2": {
@@ -73,7 +79,10 @@
         "BucketPolicyE9A3008A"
       ],
       "UpdateReplacePolicy": "Delete",
-      "DeletionPolicy": "Delete"
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "StageUS/BucketStack/Bucket/AutoDeleteObjectsCustomResource/Default"
+      }
     },
     "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
       "Type": "AWS::IAM::Role",
@@ -95,6 +104,9 @@
             "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "StageUS/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role"
       }
     },
     "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
@@ -129,7 +141,19 @@
       },
       "DependsOn": [
         "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
-      ]
+      ],
+      "Metadata": {
+        "aws:cdk:path": "StageUS/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAE1VOWwqDMBA8S//jqrTQ37ZeQPQEsm4lpmYhu7EU8e5VUpB+zYsZpoACitOte0uGvcsX5ECwtNqhMxV70RBRTRVFeWpIOAYkUz39wf+iOvBsewrmLkK6zQzWD6vZ5+UMyyOiI937P5ag5pfFz2Enva7Gc08wSj6XFyiv29FRrM1C9GongibhF4Jh3cLDAAAA"
+      },
+      "Metadata": {
+        "aws:cdk:path": "StageUS/BucketStack/CDKMetadata/Default"
+      }
     }
   },
   "Outputs": {

@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        run: echo "nothing to do"
+        run: echo "nothing to do (cdk.out is committed)"
   Assets-FileAsset1:
     name: Publish Assets Assets-FileAsset1
     needs:
@@ -36,12 +36,12 @@ jobs:
           aws-region: us-west-2
           role-skip-session-tagging: true
           role-duration-seconds: 1800
-      - name: Publish 1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92
+      - name: Publish 094cb5573c9b390fe288e5e878e261ccd1ab62247a7a66bcb606fe3084a6dd82
           (template)
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSBucketStack55155FD2.assets.json"
+          "cdk.out/assembly-StageA/StageABucketStackEAC67DBE.assets.json"
           --verbose publish
-          "1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92:585695036304-us-east-1"
+          "094cb5573c9b390fe288e5e878e261ccd1ab62247a7a66bcb606fe3084a6dd82:585695036304-us-east-1"
   Assets-FileAsset2:
     name: Publish Assets Assets-FileAsset2
     needs:
@@ -64,13 +64,13 @@ jobs:
       - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSBucketStack55155FD2.assets.json"
+          "cdk.out/assembly-StageA/StageABucketStackEAC67DBE.assets.json"
           --verbose publish
           "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-us-east-1"
       - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUBucketStack1CE2F45A.assets.json"
+          "cdk.out/assembly-StageB/StageBBucketStackDF3FFF07.assets.json"
           --verbose publish
           "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
   Assets-FileAsset3:
@@ -92,12 +92,12 @@ jobs:
           aws-region: us-west-2
           role-skip-session-tagging: true
           role-duration-seconds: 1800
-      - name: Publish fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a
+      - name: Publish 6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4
           (template)
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSFunctionStackFD0586E0.assets.json"
+          "cdk.out/assembly-StageA/StageAFunctionStackD42C27B8.assets.json"
           --verbose publish
-          "fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a:585695036304-us-east-1"
+          "6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4:585695036304-us-east-1"
   Assets-FileAsset4:
     name: Publish Assets Assets-FileAsset4
     needs:
@@ -120,13 +120,13 @@ jobs:
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageUS/StageUSFunctionStackFD0586E0.assets.json"
+          "cdk.out/assembly-StageA/StageAFunctionStackD42C27B8.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-us-east-1"
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUFunctionStack5AFECDE6.assets.json"
+          "cdk.out/assembly-StageB/StageBFunctionStack18098DCD.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
   Assets-FileAsset5:
@@ -148,12 +148,12 @@ jobs:
           aws-region: us-west-2
           role-skip-session-tagging: true
           role-duration-seconds: 1800
-      - name: Publish 2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49
+      - name: Publish 1172f6b9744a7e00f12cfe006f60c452d662b4fcb2ce77a76d70cec688f21be7
           (template)
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUBucketStack1CE2F45A.assets.json"
+          "cdk.out/assembly-StageB/StageBBucketStackDF3FFF07.assets.json"
           --verbose publish
-          "2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49:585695036304-eu-west-2"
+          "1172f6b9744a7e00f12cfe006f60c452d662b4fcb2ce77a76d70cec688f21be7:585695036304-eu-west-2"
   Assets-FileAsset6:
     name: Publish Assets Assets-FileAsset6
     needs:
@@ -176,7 +176,7 @@ jobs:
       - name: "Publish 1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUBucketStack1CE2F45A.assets.json"
+          "cdk.out/assembly-StageB/StageBBucketStackDF3FFF07.assets.json"
           --verbose publish
           "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1:585695036304-eu-west-2"
   Assets-FileAsset7:
@@ -198,12 +198,12 @@ jobs:
           aws-region: us-west-2
           role-skip-session-tagging: true
           role-duration-seconds: 1800
-      - name: Publish 052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df
+      - name: Publish 452c4543db10d97b5a1aa68aaf979a2e04c113051065950a6538a88929e63df9
           (template)
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUFunctionStack5AFECDE6.assets.json"
+          "cdk.out/assembly-StageB/StageBFunctionStack18098DCD.assets.json"
           --verbose publish
-          "052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df:585695036304-eu-west-2"
+          "452c4543db10d97b5a1aa68aaf979a2e04c113051065950a6538a88929e63df9:585695036304-eu-west-2"
   Assets-FileAsset8:
     name: Publish Assets Assets-FileAsset8
     needs:
@@ -226,11 +226,11 @@ jobs:
       - name: "Publish 110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c
           "
         run: npx cdk-assets --path
-          "cdk.out/assembly-StageEU/StageEUFunctionStack5AFECDE6.assets.json"
+          "cdk.out/assembly-StageB/StageBFunctionStack18098DCD.assets.json"
           --verbose publish
           "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c:585695036304-eu-west-2"
-  StageUS-BucketStack-Deploy:
-    name: Deploy StageUSBucketStack55155FD2
+  StageA-BucketStack-Deploy:
+    name: Deploy StageABucketStackEAC67DBE
     permissions:
       contents: none
     needs:
@@ -251,19 +251,19 @@ jobs:
           role-external-id: Pipeline
       - uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: StageUS-BucketStack
-          template: https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/1fcce778fbccdf9231e609a131e09ebc1e26f1fb5aca6cc0aa81bcd795817c92.json
+          name: StageA-BucketStack
+          template: https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/094cb5573c9b390fe288e5e878e261ccd1ab62247a7a66bcb606fe3084a6dd82.json
           no-fail-on-empty-changeset: "1"
           role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
-  StageUS-FunctionStack-Deploy:
-    name: Deploy StageUSFunctionStackFD0586E0
+  StageA-FunctionStack-Deploy:
+    name: Deploy StageAFunctionStackD42C27B8
     permissions:
       contents: none
     needs:
       - Build-Build
       - Assets-FileAsset3
       - Assets-FileAsset4
-      - StageUS-BucketStack-Deploy
+      - StageA-BucketStack-Deploy
       - Build-Build
     runs-on: ubuntu-latest
     steps:
@@ -278,12 +278,12 @@ jobs:
           role-external-id: Pipeline
       - uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: StageUS-FunctionStack
-          template: https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/fb5d569e1c027177788172599c9642d7018bf657de1aafdcf10790059b754d4a.json
+          name: StageA-FunctionStack
+          template: https://cdk-hnb659fds-assets-585695036304-us-east-1.s3.amazonaws.com/6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4.json
           no-fail-on-empty-changeset: "1"
           role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1
-  StageEU-BucketStack-Deploy:
-    name: Deploy StageEUBucketStack1CE2F45A
+  StageB-BucketStack-Deploy:
+    name: Deploy StageBBucketStackDF3FFF07
     permissions:
       contents: none
     needs:
@@ -291,8 +291,8 @@ jobs:
       - Assets-FileAsset5
       - Assets-FileAsset6
       - Build-Build
-      - StageUS-BucketStack-Deploy
-      - StageUS-FunctionStack-Deploy
+      - StageA-BucketStack-Deploy
+      - StageA-FunctionStack-Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: aws-actions/configure-aws-credentials@v1
@@ -306,22 +306,22 @@ jobs:
           role-external-id: Pipeline
       - uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: StageEU-BucketStack
-          template: https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49.json
+          name: StageB-BucketStack
+          template: https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/1172f6b9744a7e00f12cfe006f60c452d662b4fcb2ce77a76d70cec688f21be7.json
           no-fail-on-empty-changeset: "1"
           role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2
-  StageEU-FunctionStack-Deploy:
-    name: Deploy StageEUFunctionStack5AFECDE6
+  StageB-FunctionStack-Deploy:
+    name: Deploy StageBFunctionStack18098DCD
     permissions:
       contents: none
     needs:
       - Build-Build
       - Assets-FileAsset7
       - Assets-FileAsset8
-      - StageEU-BucketStack-Deploy
+      - StageB-BucketStack-Deploy
       - Build-Build
-      - StageUS-BucketStack-Deploy
-      - StageUS-FunctionStack-Deploy
+      - StageA-BucketStack-Deploy
+      - StageA-FunctionStack-Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: aws-actions/configure-aws-credentials@v1
@@ -335,7 +335,7 @@ jobs:
           role-external-id: Pipeline
       - uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: StageEU-FunctionStack
-          template: https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df.json
+          name: StageB-FunctionStack
+          template: https://cdk-hnb659fds-assets-585695036304-eu-west-2.s3.amazonaws.com/452c4543db10d97b5a1aa68aaf979a2e04c113051065950a6538a88929e63df9.json
           no-fail-on-empty-changeset: "1"
           role-arn: arn:aws:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2

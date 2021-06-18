@@ -31,7 +31,7 @@
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "StageUS/FunctionStack/Function/ServiceRole/Resource"
+        "aws:cdk:path": "StageA/FunctionStack/Function/ServiceRole/Resource"
       }
     },
     "FunctionServiceRoleDefaultPolicy2F49994A": {
@@ -48,14 +48,14 @@
               "Effect": "Allow",
               "Resource": [
                 {
-                  "Fn::ImportValue": "StageUS-BucketStack:BucketStackExportsOutputFnGetAttBucket83908E77ArnFCB6DD2F"
+                  "Fn::ImportValue": "StageA-BucketStack:BucketStackExportsOutputFnGetAttBucket83908E77ArnFCB6DD2F"
                 },
                 {
                   "Fn::Join": [
                     "",
                     [
                       {
-                        "Fn::ImportValue": "StageUS-BucketStack:BucketStackExportsOutputFnGetAttBucket83908E77ArnFCB6DD2F"
+                        "Fn::ImportValue": "StageA-BucketStack:BucketStackExportsOutputFnGetAttBucket83908E77ArnFCB6DD2F"
                       },
                       "/*"
                     ]
@@ -74,7 +74,7 @@
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "StageUS/FunctionStack/Function/ServiceRole/DefaultPolicy/Resource"
+        "aws:cdk:path": "StageA/FunctionStack/Function/ServiceRole/DefaultPolicy/Resource"
       }
     },
     "Function76856677": {
@@ -93,7 +93,7 @@
         "Environment": {
           "Variables": {
             "BUCKET_NAME": {
-              "Fn::ImportValue": "StageUS-BucketStack:BucketStackExportsOutputRefBucket83908E7744530BB2"
+              "Fn::ImportValue": "StageA-BucketStack:BucketStackExportsOutputRefBucket83908E7744530BB2"
             }
           }
         },
@@ -105,7 +105,7 @@
         "FunctionServiceRole675BB04A"
       ],
       "Metadata": {
-        "aws:cdk:path": "StageUS/FunctionStack/Function/Resource",
+        "aws:cdk:path": "StageA/FunctionStack/Function/Resource",
         "aws:asset:path": "../asset.110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c",
         "aws:asset:property": "Code"
       }
@@ -116,7 +116,7 @@
         "Analytics": "v2:deflate64:H4sIAAAAAAAAEzWO3QqDMAyFn2X3MSob7HZD2PXQJ+hqJ/EnhabdGKXvPqt4db6EnHNSYYXV6aa+Uuh+KqO2zmDsvNIT3EWMX3EgHqA1YoPTBhrL4l3QHpo3H9sEOSHOann1CuMjsPZkOZ8cnIDUgrG1s9mcWZ92Jv3L404J5FyoXCu4tacEbHuDo5Sf+oL1dX12FKLCBfa0GGx3/QORk/BExwAAAA=="
       },
       "Metadata": {
-        "aws:cdk:path": "StageUS/FunctionStack/CDKMetadata/Default"
+        "aws:cdk:path": "StageA/FunctionStack/CDKMetadata/Default"
       }
     }
   },

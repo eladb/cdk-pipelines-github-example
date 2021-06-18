@@ -1,18 +1,18 @@
 {
   "version": "12.0.0",
   "artifacts": {
-    "assembly-StageUS": {
+    "assembly-StageA": {
       "type": "cdk:cloud-assembly",
       "properties": {
-        "directoryName": "assembly-StageUS",
-        "displayName": "StageUS"
+        "directoryName": "assembly-StageA",
+        "displayName": "StageA"
       }
     },
-    "assembly-StageEU": {
+    "assembly-StageB": {
       "type": "cdk:cloud-assembly",
       "properties": {
-        "directoryName": "assembly-StageEU",
-        "displayName": "StageEU"
+        "directoryName": "assembly-StageB",
+        "displayName": "StageB"
       }
     }
   }

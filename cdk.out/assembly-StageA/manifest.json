@@ -1,164 +1,164 @@
 {
   "version": "12.0.0",
   "artifacts": {
-    "StageUSFunctionStackFD0586E0.assets": {
+    "StageAFunctionStackD42C27B8.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "StageUSFunctionStackFD0586E0.assets.json",
+        "file": "StageAFunctionStackD42C27B8.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "StageUSFunctionStackFD0586E0": {
+    "StageAFunctionStackD42C27B8": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://585695036304/us-east-1",
       "properties": {
-        "templateFile": "StageUSFunctionStackFD0586E0.template.json",
+        "templateFile": "StageAFunctionStackD42C27B8.template.json",
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/4873b0f3cf3fb2a2ed0c9b1dabc99a2ce544cb3dd987d64642782202d118248b.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "StageUSFunctionStackFD0586E0.assets"
+          "StageAFunctionStackD42C27B8.assets"
         ],
-        "stackName": "StageUS-FunctionStack"
+        "stackName": "StageA-FunctionStack"
       },
       "dependencies": [
-        "StageUSBucketStack55155FD2",
-        "StageUSFunctionStackFD0586E0.assets"
+        "StageABucketStackEAC67DBE",
+        "StageAFunctionStackD42C27B8.assets"
       ],
       "metadata": {
-        "/StageUS/FunctionStack/Function/ServiceRole/Resource": [
+        "/StageA/FunctionStack/Function/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FunctionServiceRole675BB04A"
           }
         ],
-        "/StageUS/FunctionStack/Function/ServiceRole/DefaultPolicy/Resource": [
+        "/StageA/FunctionStack/Function/ServiceRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FunctionServiceRoleDefaultPolicy2F49994A"
           }
         ],
-        "/StageUS/FunctionStack/Function/Resource": [
+        "/StageA/FunctionStack/Function/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Function76856677"
           }
         ],
-        "/StageUS/FunctionStack/CDKMetadata/Default": [
+        "/StageA/FunctionStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/StageUS/FunctionStack/BootstrapVersion": [
+        "/StageA/FunctionStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/StageUS/FunctionStack/CheckBootstrapVersion": [
+        "/StageA/FunctionStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "StageUS/FunctionStack"
+      "displayName": "StageA/FunctionStack"
     },
-    "StageUSBucketStack55155FD2.assets": {
+    "StageABucketStackEAC67DBE.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "StageUSBucketStack55155FD2.assets.json",
+        "file": "StageABucketStackEAC67DBE.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "StageUSBucketStack55155FD2": {
+    "StageABucketStackEAC67DBE": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://585695036304/us-east-1",
       "properties": {
-        "templateFile": "StageUSBucketStack55155FD2.template.json",
+        "templateFile": "StageABucketStackEAC67DBE.template.json",
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/913607ea7e1b9ceceb2cbd61644463104323b443303a1310c481ad975261ebee.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/094cb5573c9b390fe288e5e878e261ccd1ab62247a7a66bcb606fe3084a6dd82.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "StageUSBucketStack55155FD2.assets"
+          "StageABucketStackEAC67DBE.assets"
         ],
-        "stackName": "StageUS-BucketStack"
+        "stackName": "StageA-BucketStack"
       },
       "dependencies": [
-        "StageUSBucketStack55155FD2.assets"
+        "StageABucketStackEAC67DBE.assets"
       ],
       "metadata": {
-        "/StageUS/BucketStack/Bucket/Resource": [
+        "/StageA/BucketStack/Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "Bucket83908E77"
           }
         ],
-        "/StageUS/BucketStack/Bucket/Policy/Resource": [
+        "/StageA/BucketStack/Bucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BucketPolicyE9A3008A"
           }
         ],
-        "/StageUS/BucketStack/Bucket/AutoDeleteObjectsCustomResource/Default": [
+        "/StageA/BucketStack/Bucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BucketAutoDeleteObjectsCustomResourceBAFD23C2"
           }
         ],
-        "/StageUS/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+        "/StageA/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
           }
         ],
-        "/StageUS/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+        "/StageA/BucketStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
-        "/StageUS/BucketStack/CDKMetadata/Default": [
+        "/StageA/BucketStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/StageUS/BucketStack/Exports/Output{\"Fn::GetAtt\":[\"Bucket83908E77\",\"Arn\"]}": [
+        "/StageA/BucketStack/Exports/Output{\"Fn::GetAtt\":[\"Bucket83908E77\",\"Arn\"]}": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ExportsOutputFnGetAttBucket83908E77Arn063C8555"
           }
         ],
-        "/StageUS/BucketStack/Exports/Output{\"Ref\":\"Bucket83908E77\"}": [
+        "/StageA/BucketStack/Exports/Output{\"Ref\":\"Bucket83908E77\"}": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ExportsOutputRefBucket83908E7781C90AC0"
           }
         ],
-        "/StageUS/BucketStack/BootstrapVersion": [
+        "/StageA/BucketStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/StageUS/BucketStack/CheckBootstrapVersion": [
+        "/StageA/BucketStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "StageUS/BucketStack"
+      "displayName": "StageA/BucketStack"
     }
   }
 }

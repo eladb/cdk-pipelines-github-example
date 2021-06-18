@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-eu-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-eu-west-2/052506cdecc7dda8e6cb83af1d97c436fbe34bd56026a180171ce790facbb9df.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-eu-west-2/bbd3f490637a6371bae3a66266b52d8f6b8e575da8630fdffcb41e1b7055192b.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -46,6 +46,12 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "Function76856677"
+          }
+        ],
+        "/StageEU/FunctionStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
           }
         ],
         "/StageEU/FunctionStack/BootstrapVersion": [
@@ -79,7 +85,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-eu-west-2",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-eu-west-2",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-eu-west-2/2329998f5c0a101e9c242f373958f41443da7be5b48f5bd4cded838afa156d49.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-eu-west-2/84287d3f27d3699916d05b16decf1410d561946738aa4e415acd4c5d15a319d1.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -119,6 +125,12 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/StageEU/BucketStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
           }
         ],
         "/StageEU/BucketStack/Exports/Output{\"Fn::GetAtt\":[\"Bucket83908E77\",\"Arn\"]}": [
