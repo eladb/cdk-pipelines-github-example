@@ -16,12 +16,18 @@ cd packages/@aws-cdk/pipelines
 yarn link
 ```
 
+Add the local version of CDK CLI to your PATH:
+
+```shell
+export PATH=$HOME/projects/aws-cdk/packages/aws-cdk/bin:$PATH
+```
+
 Bootstrap your environments (you need to use an updated bootstrap template):
 
 ```shell
 export CDK_NEW_BOOTSTRAP=1
-~/projects/aws-cdk/packages/aws-cdk/bin/cdk bootstrap aws://ACCOUNTID/us-east-1
-~/projects/aws-cdk/packages/aws-cdk/bin/cdk bootstrap aws://ACCOUNTID/eu-west-2
+cdk bootstrap aws://ACCOUNTID/us-east-1
+cdk bootstrap aws://ACCOUNTID/eu-west-2
 ```
 
 Now, clone this repository, link to the dev version and synthesize:
