@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-  workflow-dispatch: {}
+  workflow_dispatch: {}
 jobs:
   Build-Build:
     name: Synthesize
