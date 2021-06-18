@@ -35,3 +35,8 @@ cdk synth
 ```
 
 You can edit the sample app under `~/projects/aws-cdk/packages/@aws-cdk/pipelines/test/blueprint/github/example-app.ts`.
+
+
+## License
+
+Licensed under the Apache 2.0 license.
