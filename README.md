@@ -37,10 +37,14 @@ cd ~/projects
 git clone git@github.com:eladb/test-app-cdkpipeline.git
 cd test-app-cdkpipeline
 yarn link @aws-cdk/pipelines
-cdk synth
 ```
 
-You can edit the sample app under `~/projects/aws-cdk/packages/@aws-cdk/pipelines/test/blueprint/github/example-app.ts`.
+Now, you can edit the sample app under `~/projects/aws-cdk/packages/@aws-cdk/pipelines/test/blueprint/github/example-app.ts` and 
+synth normally (don't forget to rebuild `~/projects/aws-cdk/packages/@aws-cdk/pipelines`):
+
+```shell
+rm -fr cdk.out && cdk synth
+```
 
 
 ## License
