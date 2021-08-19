@@ -1,5 +1,5 @@
 {
-  "version": "12.0.0",
+  "version": "13.0.0",
   "artifacts": {
     "StageAFunctionStackD42C27B8.assets": {
       "type": "cdk:asset-manifest",
@@ -14,10 +14,10 @@
       "environment": "aws://585695036304/us-east-1",
       "properties": {
         "templateFile": "StageAFunctionStackD42C27B8.template.json",
-        "validateOnSynth": false,
+        "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/93057b3fac08c22b0245c2ac3f0f29045d66d249689f7d4d276aa01a0fab7852.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -82,10 +82,10 @@
       "environment": "aws://585695036304/us-east-1",
       "properties": {
         "templateFile": "StageABucketStackEAC67DBE.template.json",
-        "validateOnSynth": false,
+        "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-deploy-role-585695036304-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-cfn-exec-role-585695036304-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/094cb5573c9b390fe288e5e878e261ccd1ab62247a7a66bcb606fe3084a6dd82.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-585695036304-us-east-1/d5e0aa76fe27c88d4ac4c41c611511de6e411113460d1969f2b620b10d9b9720.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [

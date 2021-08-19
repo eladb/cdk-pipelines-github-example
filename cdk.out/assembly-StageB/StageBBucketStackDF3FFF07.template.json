@@ -114,7 +114,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "cdk-hnb659fds-assets-585695036304-eu-west-2",
-          "S3Key": "1a8becf42c48697a059094af1e94aa6bc6df0512d30433db8c22618ca02dfca1.zip"
+          "S3Key": "4cd61014b71160e8c66fe167e43710d5ba068b80b134e9bd84508cf9238b2392.zip"
         },
         "Timeout": 900,
         "MemorySize": 128,
@@ -149,7 +149,7 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAAE1VOWwqDMBA8S//jqrTQ37ZeQPQEsm4lpmYhu7EU8e5VUpB+zYsZpoACitOte0uGvcsX5ECwtNqhMxV70RBRTRVFeWpIOAYkUz39wf+iOvBsewrmLkK6zQzWD6vZ5+UMyyOiI937P5ag5pfFz2Enva7Gc08wSj6XFyiv29FRrM1C9GongibhF4Jh3cLDAAAA"
+        "Analytics": "v2:deflate64:H4sIAAAAAAAAE1VO2wqCQBD9lt7XscUgeqv8AbEvkHGS1dyBnVkjFv89xUB6OjfO4Viw9gLHw7V5S4btkCfkQJAe2uBgSvaiIaKaMoryWJNwDEimfPqd/0VV4Mm1FMxNhHSZ6ZzvZrPOSwHpHnEgXfs/tkHFL4ef3d70PBvPLUEv+WRPYM/L0V6cy0L06kaCesMvj6YGRsUAAAA="
       },
       "Metadata": {
         "aws:cdk:path": "StageB/BucketStack/CDKMetadata/Default"

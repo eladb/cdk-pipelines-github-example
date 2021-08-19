@@ -1,5 +1,5 @@
 {
-  "version": "12.0.0",
+  "version": "13.0.0",
   "files": {
     "110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c": {
       "source": {
@@ -15,7 +15,7 @@
         }
       }
     },
-    "6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4": {
+    "93057b3fac08c22b0245c2ac3f0f29045d66d249689f7d4d276aa01a0fab7852": {
       "source": {
         "path": "StageAFunctionStackD42C27B8.template.json",
         "packaging": "file"
@@ -23,7 +23,7 @@
       "destinations": {
         "585695036304-us-east-1": {
           "bucketName": "cdk-hnb659fds-assets-585695036304-us-east-1",
-          "objectKey": "6cd08530c452175c803d84326b37859fdd82f2ad71423a6ae1b93b590fbe97c4.json",
+          "objectKey": "93057b3fac08c22b0245c2ac3f0f29045d66d249689f7d4d276aa01a0fab7852.json",
           "region": "us-east-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::585695036304:role/cdk-hnb659fds-file-publishing-role-585695036304-us-east-1"
         }
