@@ -1,3 +1,0 @@
-{
-  "app": "node node_modules/@aws-cdk/pipelines/test/blueprint/github/manual-test.js"
-}
