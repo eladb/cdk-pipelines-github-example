@@ -1,51 +1,9 @@
-# CDK Pipelines backed by GitHub Workflows - Test App
+# CDK Pipelines for GitHub Workflows - Example
 
-This repository includes the output of the GitHub engine example app as implemented in [this proof of concept](https://github.com/aws/aws-cdk/pull/15191).
+This repository includes the output of the sample app included in the
+[cdk-pipelines-github](https://github.com/cdklabs/cdk-pipelines-github) project.
 
-## How to use?
-
-You'll need to check-out and build the `benisrae/pipelines-github` branch:
-
-```shell
-cd ~/projects
-git clone git@github.com:aws/aws-cdk.git -b benisrae/pipelines-github
-cd aws-cdk
-yarn
-./scripts/foreach.sh yarn build
-cd packages/@aws-cdk/pipelines
-yarn link
-```
-
-Add the local version of CDK CLI to your PATH:
-
-```shell
-export PATH=$HOME/projects/aws-cdk/packages/aws-cdk/bin:$PATH
-```
-
-Bootstrap your environments (you need to use an updated bootstrap template):
-
-```shell
-export CDK_NEW_BOOTSTRAP=1
-cdk bootstrap aws://ACCOUNTID/us-east-1
-cdk bootstrap aws://ACCOUNTID/eu-west-2
-```
-
-Now, clone this repository, link to the dev version and synthesize:
-
-```shell
-cd ~/projects
-git clone git@github.com:eladb/test-app-cdkpipeline.git
-cd test-app-cdkpipeline
-yarn link @aws-cdk/pipelines
-```
-
-Now, you can edit the sample app under `~/projects/aws-cdk/packages/@aws-cdk/pipelines/test/blueprint/github/example-app.ts` and 
-synth normally (don't forget to rebuild `~/projects/aws-cdk/packages/@aws-cdk/pipelines`):
-
-```shell
-rm -fr cdk.out && cdk synth
-```
-
+See details in the [Example](https://github.com/cdklabs/cdk-pipelines-github#example) section in the project README.
 
 ## License
 
