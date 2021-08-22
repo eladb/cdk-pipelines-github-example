@@ -161,6 +161,7 @@ jobs:
         with:
           name: cdk.out
           path: cdk.out
+      - run: cat cdk.out/assembly-EU/EUBucketStack0F6FDF2E.assets.json
       - name: Install
         run: npm install --no-save cdk-assets
       - uses: aws-actions/configure-aws-credentials@v1
