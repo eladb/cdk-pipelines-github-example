@@ -1,9 +1,11 @@
 # CDK Pipelines for GitHub Workflows - Example
 
-This repository includes the output of the sample app included in the
-[cdk-pipelines-github](https://github.com/cdklabs/cdk-pipelines-github) project.
+This is an example project that uses GitHub workflows to deploy a CDK app
+through CDK Pipelines. See the
+[cdk-pipelines-github](https://github.com/cdklabs/cdk-pipelines-github) project
+for additional details.
 
-See details in the [Example](https://github.com/cdklabs/cdk-pipelines-github#example) section in the project README.
+You can find the pipeline definition under [main.ts](./src/main.ts).
 
 ## License
 
