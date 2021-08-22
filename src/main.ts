@@ -5,8 +5,14 @@ import { MyStage } from './my-stage';
 
 const app = new App();
 
+const build = [
+  'yarn',
+  'yarn build',
+  'git diff --exit-code', // <-- this will fail the build if the workflow is not up-to-date
+];
+
 const pipeline = new GitHubWorkflow(app, 'Pipeline', {
-  synth: new ShellStep('Build', { commands: ['yarn', 'yarn build'] }),
+  synth: new ShellStep('Build', { commands: build }),
   workflowPath: '.github/workflows/deploy.yml',
 });
 
