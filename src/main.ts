@@ -15,7 +15,10 @@ const pipeline = new GitHubWorkflow(app, 'Pipeline', {
   synth: new ShellStep('Build', { commands: build }),
   workflowPath: '.github/workflows/deploy.yml',
   preBuildSteps: [
-    { uses: 'actions/setup-node@v2', with: { nodeVersion: '14.x' } },
+    // caveat: this _must_ be the same node version as the one we use on the dev machine
+    // otherwise, the analytics data (which includes the node version) will not be the same
+    // between dev and ci build and the template hash will not be the same
+    { uses: 'actions/setup-node@v2', with: { nodeVersion: process.version } },
   ],
 });
 
