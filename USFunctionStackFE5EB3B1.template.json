@@ -109,15 +109,6 @@
         "aws:asset:path": "../asset.110e18dfbcf5cf9d2a3778bf70a12ceccf9eb10d7dd493ef917073e32450a46c",
         "aws:asset:property": "Code"
       }
-    },
-    "CDKMetadata": {
-      "Type": "AWS::CDK::Metadata",
-      "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAAEzWOzQrCMBCEn8V7um1U8Kot9Cz1CeJ2LelPAtlEkZB3t2nxNN/ADDMS5LGC6nBVHy6wn8qI1hHEh1c4iRsz+RUHbQbRWMPeBfSieZmO2AaHlEQuxlktz15BbINBr63JkT8nodUCsbMzbc2sdztr/Ga7UxJ8KlReY9hGVw91wIl8rZhSEsb2BCOXb3kGeVkfj6x14YLxeiHodv0BEsSu7c4AAAA="
-      },
-      "Metadata": {
-        "aws:cdk:path": "US/FunctionStack/CDKMetadata/Default"
-      }
     }
   },
   "Parameters": {
