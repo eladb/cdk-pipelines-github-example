@@ -78,6 +78,9 @@
         },
         {
           "spawn": "synth"
+        },
+        {
+          "exec": "cp cdk.out/assembly-US/USFunctionStackFE5EB3B1.template.json USFunctionStackFE5EB3B1.template.json"
         }
       ]
     },
