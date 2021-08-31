@@ -14,6 +14,9 @@ const build = [
 const pipeline = new GitHubWorkflow(app, 'Pipeline', {
   synth: new ShellStep('Build', { commands: build }),
   workflowPath: '.github/workflows/deploy.yml',
+  preBuildSteps: [
+    { uses: 'actions/setup-node@v2', with: { nodeVersion: '14.x' } },
+  ],
 });
 
 // a wave deploys all stages concurrently
