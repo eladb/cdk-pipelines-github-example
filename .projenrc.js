@@ -16,10 +16,4 @@ const project = new AwsCdkTypeScriptApp({
   },
 });
 
-const cdkjson = project.tryFindObjectFile('cdk.json');
-cdkjson.addOverride('versionReporting', false);
-
-// extract a template from cdk.out so we can diagnose diff between local & CI build
-project.buildTask.exec('cp cdk.out/assembly-US/USFunctionStackFE5EB3B1.template.json USFunctionStackFE5EB3B1.template.json');
-
 project.synth();
